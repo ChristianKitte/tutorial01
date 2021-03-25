@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="deautlText">Willkommen auf meiner ersten App</string>
+    <string name="button01Text">Zur nächsten Seite gehen...</string>
+
+    <string name="button02Text">Meine Website öffnen...</string>
+
+    <string name="notification">Hallöchen</string>
+</resources>
+
+
+
+
