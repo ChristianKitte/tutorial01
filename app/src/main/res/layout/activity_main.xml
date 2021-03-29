@@ -46,5 +46,10 @@
             android:onClick="btnClosePressed"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="16dp"/>
+    <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:name="de.ckitte.tutorial01.myFragment"
+            android:id="@+id/fragment" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/txtIntroText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

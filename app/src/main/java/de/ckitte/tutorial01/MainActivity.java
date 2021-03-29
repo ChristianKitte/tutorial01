@@ -2,6 +2,11 @@ package de.ckitte.tutorial01;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.net.Uri;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,6 +36,32 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Lifecycle", "OnCreate");
 
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mnu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.open:
+                //impliziter Intent
+                Intent myIntent = new Intent(Intent.ACTION_VIEW);
+                myIntent.setData(Uri.parse("http://www.ckitte.de"));
+                startActivity(myIntent);
+
+                return true;
+            case R.id.close:
+                this.finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void btnNextPage(View v) {
