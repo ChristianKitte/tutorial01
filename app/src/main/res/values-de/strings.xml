@@ -15,4 +15,5 @@
     <string name="anwendung_beenden">Anwendung beenden</string>
 
     <string name="replacementFragmentText">Mein Replacement Fragment</string>
+    <string name="btnSaveText">Speichern</string>
 </resources>

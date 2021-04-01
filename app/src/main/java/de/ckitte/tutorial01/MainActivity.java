@@ -86,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
         //text.setText(getResources().getText(R.string.newText));
     }
 
+    public void btnNextPage2(View v) {
+        Intent myIntent = new Intent(this, MainActivity2.class);
+        myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(myIntent);
+}
+
     public void btnClosePressed(View v) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
         dialog.setCancelable(false);
